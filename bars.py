@@ -1,6 +1,5 @@
 import json
 from math import sin, cos, sqrt, atan2, radians
-import sys
 
 
 def load_data(filepath):
@@ -37,9 +36,4 @@ def get_closest_bar(data, longitude, latitude, R=6373.0):
 
 
 if __name__ == '__main__':
-    data = load_data(sys.argv[1])
-    print(get_biggest_bar(data))
-    print(get_smallest_bar(data))
-    u_lat = float(input('Input latitude: '))
-    u_lon = float(input('Input longitude: '))
-    print(get_closest_bar(data, u_lon, u_lat))
+    pass
