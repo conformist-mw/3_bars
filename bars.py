@@ -31,7 +31,7 @@ def get_closest_bar(data, longitude, latitude, R=6373.0):
         dlat = radians(lat - latitude)
         a = sin(dlat / 2) ** 2 + cos(latitude) * cos(lat) * sin(dlon / 2) ** 2
         c = 2 * atan2(sqrt(a), sqrt(1 - a))
-        dists[bar['Cells']['Name']] = round(R * c)
+        dists[bar['Cells']['Name']] = round(R * c, 3)
     return [k for k, v in dists.items() if v == min(dists.values())]
 
 
