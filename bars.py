@@ -48,6 +48,10 @@ if __name__ == '__main__':
     print('Самый большой бар: {}'.format(get_biggest_bar(data)))
     print('Самый маленький бар: {}'.format(get_smallest_bar(data)))
     print('Введите ваши координаты: ')
-    u_lon = float(input('Долгота: '))
-    u_lat = float(input('Широта: '))
-    print('Самый близкий бар: {}'.format(get_closest_bar(data, u_lon, u_lat)))
+    u_lon = input('Долгота: ')
+    u_lat = input('Широта: ')
+    if u_lon.isdigit() and u_lat.isdigit():
+        print('Самый близкий бар: {}'.format(
+            get_closest_bar(data, float(u_lon), float(u_lat))))
+    else:
+        print('Данные введены неверно.')
